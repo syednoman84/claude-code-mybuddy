@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/claude-code-mybuddy/static/css/main.9e758323.css",
+    "main.js": "/claude-code-mybuddy/static/js/main.c3fb8c54.js",
+    "static/js/453.2ca86739.chunk.js": "/claude-code-mybuddy/static/js/453.2ca86739.chunk.js",
+    "index.html": "/claude-code-mybuddy/index.html",
+    "main.9e758323.css.map": "/claude-code-mybuddy/static/css/main.9e758323.css.map",
+    "main.c3fb8c54.js.map": "/claude-code-mybuddy/static/js/main.c3fb8c54.js.map",
+    "453.2ca86739.chunk.js.map": "/claude-code-mybuddy/static/js/453.2ca86739.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e758323.css",
+    "static/js/main.c3fb8c54.js"
+  ]
+}

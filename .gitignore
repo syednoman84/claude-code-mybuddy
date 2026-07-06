@@ -1,0 +1,22 @@
+# Dependencies
+app/node_modules/
+
+# Production build
+app/build/
+
+# Environment files (contain secrets)
+app/.env.local
+app/.env.development.local
+app/.env.test.local
+app/.env.production.local
+
+# Testing
+app/coverage/
+
+# Misc
+.DS_Store
+app/npm-debug.log*
+app/yarn-debug.log*
+app/yarn-error.log*
+app/.pnp
+app/.pnp.js
