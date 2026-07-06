@@ -1,23 +1,23 @@
-# MyBuddy - My ChatGPT
+# 🤖 MyBuddy - My ChatGPT
 
 A ChatGPT-style chat interface that connects to **any OpenAI-compatible API** — your company's LiteLLM proxy, OpenAI directly, Groq, Google Gemini, Mistral, OpenRouter, or a local model server. Switch models, organise conversations into projects, and keep full chat history — all stored locally in your browser.
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Framework | React 18 (Create React App, TypeScript) |
-| Styling | Plain CSS with CSS custom properties |
-| Markdown rendering | `react-markdown` + `remark-gfm` + `remark-breaks` |
-| Icons | `lucide-react` |
-| State persistence | Browser `localStorage` |
-| LLM backend | Any provider with an OpenAI-compatible `/v1/chat/completions` endpoint |
+| ⚛️ Framework | React 18 (Create React App, TypeScript) |
+| 🎨 Styling | Plain CSS with CSS custom properties |
+| 📝 Markdown rendering | `react-markdown` + `remark-gfm` + `remark-breaks` |
+| 🎯 Icons | `lucide-react` |
+| 💾 State persistence | Browser `localStorage` |
+| 🧠 LLM backend | Any provider with an OpenAI-compatible `/v1/chat/completions` endpoint |
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### 1. Install dependencies
 
@@ -42,7 +42,7 @@ REACT_APP_LITELLM_AUTH_TOKEN=sk-your-api-key-here
 REACT_APP_LITELLM_DEFAULT_MODEL=your-model-id
 ```
 
-> `app/.env.local` is gitignored — your credentials will never be committed.
+> 🔒 `app/.env.local` is gitignored — your credentials will never be committed.
 
 ### 3. Run the app
 
@@ -64,11 +64,11 @@ Outputs a static bundle to `app/build/`, ready to serve with any static file hos
 
 ---
 
-## Supported AI Providers
+## 🌐 Supported AI Providers
 
 The app works with **any API that speaks the OpenAI `/v1/chat/completions` format**. Just point it at the right base URL and provide your API key.
 
-### Company LiteLLM Proxy
+### 🏢 Company LiteLLM Proxy
 
 If your organisation runs a LiteLLM proxy (e.g. to route to AWS Bedrock, Azure, or other backends):
 
@@ -78,7 +78,7 @@ If your organisation runs a LiteLLM proxy (e.g. to route to AWS Bedrock, Azure, 
 | Auth Token | Your proxy key |
 | Model | Whatever your proxy exposes, e.g. `bedrock-claude-sonnet-4-6` |
 
-### OpenAI
+### 🟢 OpenAI
 
 Requires an [OpenAI Platform](https://platform.openai.com) account (separate from a ChatGPT subscription).
 
@@ -88,9 +88,9 @@ Requires an [OpenAI Platform](https://platform.openai.com) account (separate fro
 | Auth Token | Your OpenAI API key (`sk-...`) |
 | Model | `gpt-4o`, `gpt-4o-mini`, `o1-mini`, etc. |
 
-### Free Providers (no credit card required)
+### 🆓 Free Providers (no credit card required)
 
-#### Groq — recommended for free testing
+#### ⚡ Groq — recommended for free testing
 Fast inference, generous free tier, no credit card needed.
 
 | Setting | Value |
@@ -99,7 +99,7 @@ Fast inference, generous free tier, no credit card needed.
 | Auth Token | Free key from [console.groq.com](https://console.groq.com) |
 | Model | `llama-3.3-70b-versatile`, `mixtral-8x7b-32768`, `gemma2-9b-it` |
 
-#### Google Gemini
+#### 🔵 Google Gemini
 Free tier via Google AI Studio, no credit card needed.
 
 | Setting | Value |
@@ -108,7 +108,7 @@ Free tier via Google AI Studio, no credit card needed.
 | Auth Token | Free key from [aistudio.google.com](https://aistudio.google.com) |
 | Model | `gemini-2.0-flash`, `gemini-1.5-flash` |
 
-#### OpenRouter — many free models
+#### 🔀 OpenRouter — many free models
 Aggregator that routes to many providers; several models are permanently free.
 
 | Setting | Value |
@@ -117,7 +117,7 @@ Aggregator that routes to many providers; several models are permanently free.
 | Auth Token | Free key from [openrouter.ai](https://openrouter.ai) |
 | Model | `meta-llama/llama-3.1-8b-instruct:free`, `mistralai/mistral-7b-instruct:free` |
 
-#### Mistral
+#### 🟠 Mistral
 Free tier available, no credit card for basic models.
 
 | Setting | Value |
@@ -126,7 +126,7 @@ Free tier available, no credit card for basic models.
 | Auth Token | Free key from [console.mistral.ai](https://console.mistral.ai) |
 | Model | `mistral-small-latest`, `open-mistral-7b` |
 
-### Local Models (Ollama)
+### 🏠 Local Models (Ollama)
 
 Run models fully offline with [Ollama](https://ollama.com).
 
@@ -138,37 +138,37 @@ Run models fully offline with [Ollama](https://ollama.com).
 
 ---
 
-## Features
+## ✨ Features
 
-### Chat
+### 💬 Chat
 
-- **Streaming responses** — tokens stream in real time as the model generates them
-- **Stop generation** — cancel an in-flight response at any time with the Stop button
-- **Markdown rendering** — responses render with full GFM support: headings, lists, tables, blockquotes, inline code, and fenced code blocks
-- **Code blocks** — syntax-highlighted with a one-click copy button
-- **Keyboard shortcuts** — `Enter` sends, `Shift+Enter` adds a newline
-- **Auto-growing input** — the textarea expands as you type, up to 240px
+- **⚡ Streaming responses** — tokens stream in real time as the model generates them
+- **⏹️ Stop generation** — cancel an in-flight response at any time with the Stop button
+- **📄 Markdown rendering** — responses render with full GFM support: headings, lists, tables, blockquotes, inline code, and fenced code blocks
+- **💻 Code blocks** — syntax-highlighted with a one-click copy button
+- **⌨️ Keyboard shortcuts** — `Enter` sends, `Shift+Enter` adds a newline
+- **📐 Auto-growing input** — the textarea expands as you type, up to 240px
 
-### Chat History
+### 🕓 Chat History
 
 - All conversations are **persisted to `localStorage`** and survive page refresh
-- **Chat titles** are auto-generated from the first message you send
-- **Rename** any chat: double-click its title in the sidebar or right-click → Rename
-- **Delete** any chat: hover to reveal the trash icon, or right-click → Delete
+- **🏷️ Chat titles** are auto-generated from the first message you send
+- **✏️ Rename** any chat: double-click its title in the sidebar or right-click → Rename
+- **🗑️ Delete** any chat: hover to reveal the trash icon, or right-click → Delete
 
-### Projects
+### 📁 Projects
 
 Projects let you group related chats into named folders, the same way ChatGPT organises conversations.
 
-- **Create a project** — click "New Project" at the bottom of the Projects section in the sidebar and type a name
-- **Create a chat inside a project** — hover over the project name and click the `+` button that appears
-- **Move a chat into a project** — right-click any chat → Move to "Project Name"
-- **Remove a chat from a project** — right-click the chat → Remove from project (moves it to the general Chats section)
-- **Rename a project** — right-click the project header → Rename, or double-click the name
-- **Delete a project** — right-click → Delete (also deletes all chats inside it)
+- **➕ Create a project** — click "New Project" at the bottom of the Projects section in the sidebar and type a name
+- **💬 Create a chat inside a project** — hover over the project name and click the `+` button that appears
+- **📂 Move a chat into a project** — right-click any chat → Move to "Project Name"
+- **↩️ Remove a chat from a project** — right-click the chat → Remove from project (moves it to the general Chats section)
+- **✏️ Rename a project** — right-click the project header → Rename, or double-click the name
+- **🗑️ Delete a project** — right-click → Delete (also deletes all chats inside it)
 - Projects are collapsible — click the chevron to expand or collapse
 
-### Model Selection
+### 🧩 Model Selection
 
 Switch models without leaving the chat using the dropdown in the header.
 
@@ -183,28 +183,28 @@ Switch models without leaving the chat using the dropdown in the header.
 
 To use a model from a different provider, open **Settings** (gear icon) → select "Custom model ID" and enter any model string your chosen provider supports.
 
-### Settings
+### ⚙️ Settings
 
 Click the gear icon (top right) to update at any time:
 
 | Setting | Description |
 |---|---|
-| LiteLLM Proxy URL | Base URL of your AI provider |
-| Auth Token | API key or bearer token |
-| Model | Active model ID |
-| System Prompt | Instructions prepended to every conversation |
+| 🌐 Base URL | Base URL of your AI provider |
+| 🔑 Auth Token | API key or bearer token |
+| 🧠 Model | Active model ID |
+| 📋 System Prompt | Instructions prepended to every conversation |
 
 Settings are saved to `localStorage` immediately and override the `.env.local` defaults.
 
-### Sidebar
+### 🗂️ Sidebar
 
-- **Collapsible** — click the panel icon to fold the sidebar to icon-only width; preference persists across reloads
-- **New Chat button** — the `+` icon at the top starts a new unassigned chat
-- Sidebar sections: **Projects** (grouped chats) → **Chats** (ungrouped)
+- **🔀 Collapsible** — click the panel icon to fold the sidebar to icon-only width; preference persists across reloads
+- **➕ New Chat button** — the `+` icon at the top starts a new unassigned chat
+- Sidebar sections: **📁 Projects** (grouped chats) → **💬 Chats** (ungrouped)
 
 ---
 
-## Configuration
+## 🔧 Configuration
 
 ### Option 1 — Environment variables (default on first load)
 
@@ -243,7 +243,7 @@ llama3.2
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 app/
@@ -266,9 +266,9 @@ app/
 
 ---
 
-## Security Notes
+## 🔒 Security Notes
 
-- `app/.env.local` is gitignored and will never be committed
-- The auth token is stored in `localStorage` after the first settings save — do not use this app on a shared browser profile
-- All LLM requests are made directly from the browser to the provider API; no server component is involved
-- Be aware of CORS: some providers (e.g. OpenRouter, Groq, Gemini) allow browser-to-API requests; others may not — check your provider's documentation if you see CORS errors
+- 🚫 `app/.env.local` is gitignored and will never be committed
+- ⚠️ The auth token is stored in `localStorage` after the first settings save — do not use this app on a shared browser profile
+- 🌐 All LLM requests are made directly from the browser to the provider API; no server component is involved
+- 🔄 Be aware of CORS: some providers (e.g. OpenRouter, Groq, Gemini) allow browser-to-API requests; others may not — check your provider's documentation if you see CORS errors
