@@ -1,4 +1,4 @@
-# MyBuddy
+# MyBuddy - My ChatGPT 
 
 A ChatGPT-style chat interface that connects to any [LiteLLM](https://github.com/BerriAI/litellm) proxy. Switch models, organise conversations into projects, and keep full chat history — all stored locally in your browser.
 
